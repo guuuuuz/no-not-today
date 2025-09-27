@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>No, Not Today</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f6f5f3;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 500px;
+      text-align: center;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      background-color: #c2fbd7;
+      border: 1px solid #333;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>No, Not Today 🧦</h1>
+  <p>You don’t need to explain, justify, or be productive today. You are enough, right here.</p>
+  <button onclick="newQuote()">Give me a reason</button>
+  <p id="quote" style="margin-top:1rem; font-style: italic;"></p>
+  <script>
+    const quotes = [
+      "The world can wait.",
+      "Rest is resistance.",
+      "Responsibility isn’t seasonal.",
+      "You are not a cog.",
+      "Socks. Tea. Pause.",
+      "Not everything needs a reason.",
+      "Survival is enough.",
+    ];
+    function newQuote() {
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerText = q;
+    }
+  </script>
+</body>
+</html>
